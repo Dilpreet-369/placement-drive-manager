@@ -5,7 +5,7 @@ export async function GET() {
   try {
     const drives = await prisma.placementDrive.findMany({
       orderBy: {
-        driveDate: 'asc',
+        createdAt: 'desc',
       },
     });
 
